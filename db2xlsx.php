@@ -20,6 +20,8 @@
    $conn = new mysqli('localhost', 'root', '');   
    mysqli_select_db($conn, 'EmployeeDB');   
    $conn->set_charset("utf8");
+$sql = mysqli_query($conn,"SELECT `ur_Id`,`ur_username`,`ur_password` FROM `tbl_user`");  
+
 while($data = mysqli_fetch_row($sql))  
 {  
     echo '  
