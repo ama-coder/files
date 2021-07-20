@@ -20,5 +20,15 @@
    $conn = new mysqli('localhost', 'root', '');   
    mysqli_select_db($conn, 'EmployeeDB');   
    $conn->set_charset("utf8");
+while($data = mysqli_fetch_row($sql))  
+{  
+    echo '  
+    <tr>  
+    <td>'.$data[0].'</td>  
+    <td>'.$data[1].'</td>  
+    <td>'.$data[2].'</td>  
+    </tr>  
+    ';  
+}
 
 ?>
